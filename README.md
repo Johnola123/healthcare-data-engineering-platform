@@ -92,6 +92,4 @@ git push -u origin main
 
 Replace `YOUR_USERNAME` with your GitHub account name.
 
-## Resume example (once tested)
 
-Built an end-to-end synthetic healthcare analytics lakehouse using Python, SQL, and DuckDB, with automated ETL, bronze/silver/gold modeling, 11 quality checks, GitHub CI, and optional Airflow, R, and Databricks components.
