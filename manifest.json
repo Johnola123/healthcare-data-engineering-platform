@@ -1,0 +1,12 @@
+{
+  "counts": {
+    "patients": 250,
+    "encounters": 1200,
+    "labs": 1200
+  },
+  "sha256": {
+    "patients.csv": "7e985f0d87d32e44313bf28dd4f2a9aa8709071410c151c1c3a5e729eeaec331",
+    "encounters.csv": "3333b63040042ead99a7f4da12a53f5679555b32a4994b2b9d15345459b3a35b",
+    "labs.csv": "153ed5a08d65ac94939d8a07c34276016e9af5473194191eda480c96fc273af3"
+  }
+}

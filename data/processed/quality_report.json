@@ -1,0 +1,17 @@
+{
+  "checked_at_utc": "2026-10-25T19:22:58.685162+00:00",
+  "checks": {
+    "unique_patient_ids": 0,
+    "unique_encounter_ids": 0,
+    "unique_lab_ids": 0,
+    "missing_patient_ids": 0,
+    "orphan_encounters": 0,
+    "orphan_labs": 0,
+    "invalid_costs": 0,
+    "invalid_dates": 0,
+    "invalid_ages": 0,
+    "invalid_labs": 0,
+    "missing_gold_rows": 0
+  },
+  "status": "PASS"
+}

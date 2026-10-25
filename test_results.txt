@@ -1,0 +1,11 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.9, pytest-9.1.1, pluggy-1.7.0 -- /Users/olayinkaajao/Downloads/healthcare-data-platform/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/olayinkaajao/Downloads/healthcare-data-platform
+collecting ... collected 3 items
+
+tests/test_pipeline.py::test_deterministic_ingest PASSED                 [ 33%]
+tests/test_pipeline.py::test_end_to_end_and_idempotency PASSED           [ 66%]
+tests/test_pipeline.py::test_quality_gate_rejects_bad_data PASSED        [100%]
+
+============================== 3 passed in 0.82s ===============================

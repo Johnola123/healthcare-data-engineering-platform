@@ -1,0 +1,15 @@
+services:
+  airflow:
+    build: .
+    command: standalone
+    ports:
+      - "8085:8080"
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/project/dags
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+    volumes:
+      - ./:/opt/airflow/project
+      - airflow_home:/opt/airflow
+volumes:
+  airflow_home:
