@@ -1,0 +1,25 @@
+{
+  "generated_at_utc": "2026-10-25T23:14:40.874002+00:00",
+  "counts": {
+    "bronze_patients": 250,
+    "bronze_encounters": 1200,
+    "bronze_labs": 1200
+  },
+  "silver_encounters": 1200,
+  "gold_encounters": 1200,
+  "checks": {
+    "unique_patient_ids": 0,
+    "unique_encounter_ids": 0,
+    "unique_lab_ids": 0,
+    "missing_patient_ids": 0,
+    "orphan_encounters": 0,
+    "orphan_labs": 0,
+    "invalid_costs": 0,
+    "invalid_dates": 0,
+    "invalid_ages": 0,
+    "invalid_labs": 0,
+    "missing_gold_rows": 0,
+    "silver_gold_reconciliation": 0
+  },
+  "status": "PASS"
+}
