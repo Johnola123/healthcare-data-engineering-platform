@@ -1,0 +1,10 @@
+resources:
+  jobs:
+    healthcare_delta_etl:
+      name: Healthcare_Delta_Lake_ETL
+
+      tasks:
+        - task_key: healthcare_lakehouse
+          notebook_task:
+            notebook_path: ../databricks/healthcare_lakehouse.py
+            source: WORKSPACE
