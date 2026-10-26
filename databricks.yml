@@ -1,0 +1,10 @@
+bundle:
+  name: healthcare-data-engineering
+
+include:
+  - resources/*.yml
+
+targets:
+  dev:
+    default: true
+    mode: development
