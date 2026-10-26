@@ -240,6 +240,4 @@ This is a basic screen, not a complete secret scan. A real scanner (e.g. `gitlea
 
 This is a local/cloud learning demonstration using synthetic batch data. It does not yet implement live EHR integrations, production-grade access governance, PHI controls, streaming Kafka, CDC, incremental upserts, alerting, full observability, or disaster recovery. Possible next steps: Databricks bundle validation and deployment, GitHub Actions cloud job automation, dbt, S3/object storage, Kafka, Terraform, and monitoring.
 
-## Resume summary
 
-Developed a synthetic healthcare data engineering platform with Python, SQL, DuckDB, R, Docker, Apache Airflow, and PySpark; implemented Bronze/Silver/Gold models, automated quality gates, and cross-platform reconciliation. Validated the cloud implementation using Databricks serverless, Delta Lake, and Unity Catalog, matching 1,200 encounter records and departmental totals across local and cloud engines.
