@@ -194,13 +194,8 @@ The notebook and a Databricks Job are different artifacts. Export the working no
 
 The workflow is under `.github/workflows/ci.yml`. After pushing, open the **Actions** tab and confirm that the actual workflow run passed. Local `pytest` success is not evidence of GitHub-hosted CI success until checked on GitHub.
 
-Generated files and credentials should not be committed. Use GitHub Desktop to commit and push if terminal authentication is difficult.
 
-## Security and credentials — read before publishing
 
-**You do not need to put a Databricks username or password in any project file.** Logging into the Databricks web UI does not automatically insert login credentials into the notebook, PySpark script, GitHub repository, or job YAML. The `CATALOG`, `SCHEMA`, `VOLUME`, and workspace paths identify resources, not passwords. Email addresses and workspace paths may reveal identity or environment details but are not authenticators.
-
-For local Databricks CLI/SDK use, credentials are commonly kept in `~/.databrickscfg` (outside this repository) or provided through environment variables. Never commit `.databrickscfg`, `.env`, `.env.*`, tokens, OAuth secrets, service-principal secrets, or `.pem` keys. Use OAuth profiles or properly managed secrets for real deployments, and rotate any token that was publicly exposed.
 
 **Recommended additional `.gitignore` entries:**
 
@@ -219,22 +214,7 @@ __pycache__/
 .pytest_cache/
 ```
 
-### Inspect tracked files without printing secret values
 
-From the repository root:
-
-```bash
-# Which files are tracked?
-git ls-files
-
-# Flag likely credential-bearing filenames without opening them
- git ls-files | grep -Ei '(^|/)(\.env|\.databrickscfg|credentials|secrets|token)(/|\.|$)' || true
-
-# Identify lines mentioning authentication fields (review carefully; do not share values)
- git grep -n -i -E 'DATABRICKS_TOKEN|DATABRICKS_PASSWORD|CLIENT_SECRET|api[_-]?key|password[[:space:]]*=' -- ':!README.md' || true
-```
-
-This is a basic screen, not a complete secret scan. A real scanner (e.g. `gitleaks`) can catch more patterns. **If a secret was ever committed, deleting it from the latest file is not enough**: revoke/rotate the credential and assess Git history. Do not paste secret-bearing results into support chats or issues.
 
 ## Limits and extensions
 
